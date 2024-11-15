@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-Image Task</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .background-image{
+            width:100%;
+            height:100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-size:cover;
+            background-repeat: none;
+        }
+        #frontend-heading{
+            color:red;
+            position:sticky;
+            top: 0;
+            font-size: 3rem;
+            font-family:cursive;
+            text-align: center;
+            letter-spacing: .5rem;
+        }
+        #backend-heading{
+            position:sticky;
+            top: 0;
+            color:red;
+            font-size: 3rem;
+            font-family:cursive;
+            text-align: center;
+            letter-spacing: .5rem;
+        }
+        .frontend1{
+            background-image:url("html.png");
+        }
+        .frontend2{
+            background-image: url("css.avif");
+}
+.frontend3{
+    background-image: url("js.webp");
+}
+.frontend4{
+    background-image: url("bootstrap.png");
+}
+.frontend5{
+    background-image: url("react.png");
+}
+.backend1{
+    background-image: url("python.jpg");
+}
+.backend2{
+    background-image: url("laravel.webp");
+}
+.backend3{
+    background-image: url("php.jpg");
+}
+.backend4{
+    background-image: url("mysql.jpg");
+}
+.backend5{
+    background-image: url("aws.jpg");
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <section class="frontend">
+            <h1 id="frontend-heading">Frontend Images</h1>
+            <div class="frontend1 background-image"></div>
+            <div class="frontend4 background-image"></div>
+            <div class="frontend5 background-image"></div>
+            <div class="frontend2 background-image"></div>
+            <div class="frontend3 background-image"></div>
+        </section>
+        <section class="backend">
+            <h1 id="backend-heading">Backend Images</h1>
+            <div class="backend1 background-image"></div>
+            <div class="backend2 background-image"></div>
+            <div class="backend3 background-image"></div>
+            <div class="backend4 background-image"></div>
+            <div class="backend5 background-image"></div>
+        </section>
+    </main>
+</body>
+</html>

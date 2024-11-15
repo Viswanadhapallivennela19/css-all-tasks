@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 3rem;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child1,.child2,.child3,.child4{
+            width:1.5rem;
+            height:1.5rem;
+            background-color: black;
+            margin:.4rem;
+            border-radius: 50%;
+            animation: bounce 0.8s infinite alternate;
+        }
+        .child1{
+            background-color: orangered;
+            animation-delay: .1s;
+        }
+        .child2{
+            background-color:green;
+            animation-delay: .3s;
+        }
+        .child3{
+            background-color:orangered;
+            animation-delay: .5s;
+        }
+        .child4{
+            background-color:green;
+            animation-delay: .7s;
+        }
+        @keyframes bounce{
+            0%{
+                 transform: translateY(0);
+              }
+            50%{
+                 transform: translateY(-1rem); 
+                }
+            100% { 
+                transform: translateY(0); 
+                }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="child1">
+
+        </div>
+        <div class="child2">
+
+        </div>
+        <div class="child3">
+
+        </div>
+        <div class="child4">
+            
+        </div>
+    </section>
+</body>
+</html>

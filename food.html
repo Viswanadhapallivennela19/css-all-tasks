@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Page</title>
+    <style>
+        :root{
+            --nav-font:
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+            transition:all 0.6s
+        }
+        
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: lightseagreen;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.237);
+            padding: .7rem;
+            box-sizing: border-box;
+        }
+        header nav,.h1,ul,li{
+            display:inline-block;
+        }
+        header nav ul{
+            justify-content:end;
+        }
+        header a{
+            margin:0 10px;
+            color: black;
+            font-size: 1.2rem;
+            
+        }
+        header a:hover{
+            margin-top:-5px;
+            box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.168),-10px -10px 10px rgba(255, 255, 255, 0.036);
+            padding:8px;
+            border-radius: 5px;
+            /* border-radius:50% 10%50% 10% /50% 10% 50% 10%; */
+            letter-spacing: .3rem;
+            box-sizing: border-box;
+            color:white;
+            
+            
+        }
+        header span{
+            color:red;
+            font-size:2.3rem;
+        }
+        header div{
+            display: grid;
+            /* border: 2px solid black; */
+            grid-template-columns:auto auto;
+            justify-content:space-between;
+            align-items:center ;
+            column-gap: 1rem;
+            
+        }
+        main{
+            margin-top: 70px;
+            margin-bottom:13rem
+        }
+        .section-1{
+            margin: auto;
+            width: 95%;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.168);
+            padding:2% 2% 7%;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 2% 5%;
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .section-1>div{
+            height:100%;
+        }
+        .section-1 h1,h3,p{
+            text-align: center;
+            margin-top:0.3rem;
+        }
+        .section-1 p{
+            letter-spacing:1px;
+            padding:.2rem .5rem .6rem;
+              
+        }
+        .section-1 h3{
+            color:rgba(255, 0, 0, 0.766);
+            letter-spacing:.3rem;
+
+        }
+        .section-1 img{
+            width: 100%;
+            margin: auto;
+            border-radius: 10px 10px 2px 2px;
+            box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.027) inset,-10px -10px 10px white;
+            box-sizing: border-box;
+        }
+        .child{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.027);
+           
+            box-sizing: border-box;
+            justify-content: center;
+           
+        }
+        .child a{
+            width: 100%;
+            justify-content: center;
+            background-color: black;
+             padding: 1rem;
+            color: white;
+            box-sizing: border-box;
+        }
+        .child-a{
+            width: 30%;
+             margin: auto;
+            grid-column: span 4;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+             
+        }
+        .section-2{
+            width: 95%;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.096);
+            margin: auto;
+            padding: 2%;
+            margin-top:3%;
+        }
+        .section-2 img{
+            width:98%;
+            margin:auto;
+        }   
+        .section-2 h1,h2,h5{
+            text-align:center;
+            margin:2% 0;
+            letter-spacing: .2rem;
+        }
+        footer{
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: lightgray;
+            padding:1rem;
+            box-sizing: border-box;
+        }
+        .footer-section{
+            display: grid;
+            grid-template-columns: 5fr 4fr 4fr;
+            column-gap:.4rem;
+            box-sizing: border-box;
+        }
+        .footer-section a{
+            padding:.3rem;
+            margin-top: .2rem;
+            border-radius:.2rem;
+             display: inline-block;
+            background-color:whitesmoke;
+             text-align: center;
+             box-sizing: border-box;
+             color:teal;
+        }
+        .footer-section .a{
+            margin:1.2rem 0;
+        }
+        footer img{
+            width:30%;
+            border-radius: 10%;
+        }
+        footer p{
+            text-align: left;
+             
+             
+        }
+        .footer-img-parent {
+             display:flex;
+              align-items: center;
+        } 
+        .footer-img-parent p {
+            width: 50%;
+              margin-left: .3rem;
+        } 
+        .footer-section .blog-grid{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            column-gap: .2rem;     
+        }
+        .footer-section  a:hover{
+            letter-spacing: .2rem;
+        }
+        @media(max-width:900px){
+            .section-1{
+                grid-template-columns: auto auto auto;
+            }
+        }
+        @media(max-width:800px){
+            .section-1{
+                grid-template-columns: auto auto;
+            }
+        }
+        @media(max-width:400px){
+            .section-1{
+                width: 80%;
+                grid-template-columns: auto;
+            }
+        }
+        .mobile-view{
+            display:none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div> 
+           <div>
+            <h1 class="h1"><span>Chinni</span> Food Blog</h1>
+           </div>
+             
+           <div>
+            <nav class="mobile-view"> 
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Mail</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Mail</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section-1">
+            <div class="child">
+                <div ><img src="sandwich.jpg" alt="Sandwich image "></div>
+                <div>
+                    <h1>The Perfect Sandwich</h1>
+                    <h3>A Real NYC Classic</h3>
+                    <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="steak.jpg" alt="Steak image"></div>
+                <div>
+                    <h1>Let Me Tell You About</h1>
+                    <h3>This Steak</h3>
+                    <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="cherries.jpg" alt="Cherries image"></div>
+                <div>
+                    <h1>Cherries</h1>
+                    <h3>interrupted</h3>
+                    <p>Lorem ipsum text praesent tincidunt ipsum lipsum.
+                        What else?</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="wine.jpg" alt="Wine Image"></div>
+                <div>
+                    <h1>Once Again, Robust Wine</h1>
+                    <h3> Vegetable Pasta</h3>
+                    <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="popsicle.jpg" alt="popsicle image"></div>
+                <div>
+                    <h1>All I Need Is a</h1>
+                    <h3>Popsicle</h3>
+                    <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="salmon.jpg" alt="Salmon image"></div>
+                <div>
+                    <h1>Salmon For Your </h1>
+                    <h3>Skin</h3>
+                    <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="sandwich.jpg" alt="sandwich image"></div>
+                <div>
+                    <h1>The Perfect Sandwich,</h1>
+                    <h3>A Real Classic</h3>
+                    <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child">
+                <div><img src="croissant.jpg" alt=""></div>
+                <div>
+                    <h1>Le French</h1>
+                    <h3></h3>
+                    <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="child child-a">
+                <a href="#">&lt;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">&gt;</a>
+            </div>
+        </section>
+        <section class="section-2">
+           <div>
+            <h1>About Me, The Food Man</h1>
+            <img src="chef.jpg" alt="chef image">
+            <h2>I am Who I Am!</h2>
+            <h5>With Passion For Real, Good Food</h5>
+            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+           </div> 
+        </section>
+    </main>
+    <footer>
+        <section class="footer-section">
+            <div class="">
+                <h1>FOOTER</h1>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <p>powered by @ chinni</p>
+            </div>
+            <div class="">
+                <h1>BLOG POSTS</h1>
+                <div class="blog-grid">
+                <div class="footer-img-parent">
+                    <img src="workshop.jpg" alt="">
+                    <p>Lorem
+                        Sed mattis nunc</p>
+                </div>
+                <div class="footer-img-parent"> 
+                    <img src="gondol.jpg" alt="">
+                    <p>Ipsum
+                        Praes tinci sed</p>
+                </div>
+                </div>
+            </div>
+            <div class=".a">
+                <h1>POPULAR TAGS</h1>
+                <a href="#">Travel</a>
+                <a href="#">New York</a>
+                <a href="#">Dinner</a>
+                <a href="#">Salmon</a>
+                <a href="#">France</a>
+                <a href="#">Drinks</a>
+                <a href="#">Ideas</a>
+                <a href="#">Flavors</a>
+                <a href="#">Cuisine</a>
+                <a href="#">Chicken</a>
+                <a href="#">Dressing</a>
+                <a href="#">Fried</a>
+                <a href="#">Fish</a>
+                <a href="#">Duck</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

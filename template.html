@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy:wght@400&display=swap" rel="stylesheet">
+    <title>Catering Template</title>
+    <style>
+        :root{
+            --nav-font: "Poppins",  sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        body{
+            width: 100%;
+            box-sizing: border-box;
+        }
+        header h1{
+            letter-spacing:4px;
+        }
+        header h1 span{
+            color: red;
+            font-size: 36px;
+        }
+        header{
+            width: 100%;
+            background-color: whitesmoke;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.133);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            box-sizing: border-box;
+        }
+        header nav ul{
+            display: flex;
+            list-style: none;
+            letter-spacing: 2px;
+        }
+         li a{
+             margin:0 15px 0 15px;
+             text-decoration:none;
+              
+        }
+        li a:hover{
+            margin-top: -5px;
+            transition: all ease-in-out 0.9;
+            padding:8px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.067);
+            letter-spacing: 4px;
+            color:red;
+            margin-left:10px;
+        }
+        main{
+            margin-top:60px ;
+        }
+        .hero{
+            background-image: url('burger.jpg');
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            background-size: cover;
+            background-position: center;
+            margin-left: 10px;
+            
+        }
+        .hero p{
+            align-self: flex-end;
+            margin:0 0 20px 20px;
+            font-size: 24px;
+            letter-spacing: 5px;
+        }
+        
+        .about{
+            width: 80%;
+            padding:3%;
+            display: flex;
+            justify-content: space-between;
+            background-color: whitesmoke;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.166);
+            margin: auto;
+            box-sizing: border-box;
+            margin-top: 3%;
+        }
+        
+        .about-content,.menu-content{
+            width: 40%;
+             
+        }
+        .about img,.menu img{
+            width: 100%;
+        }
+        .about-content h1,.menu-content h1{
+            letter-spacing:0.4rem;
+            text-align: center;
+            margin-top: 8%;
+        }
+        .about-content h5,.menu-content h4{
+            margin-top: 7%;
+            margin-bottom:4%;
+            letter-spacing:.4rem;
+            /* text-align: center; */
+            
+        }
+        .about-content h5{
+            text-align: center;
+            
+        }
+        .about-content p,.menu-content p{
+            
+             line-height:2rem;
+             /* margin-right: 8%; */
+             /* line-break: 20px; */
+             font-size: 18px;
+             /* margin: 30px; */
+        }
+        .about-img{
+            width:55%;
+            padding:3px;
+            box-sizing: border-box;
+        }
+        .menu-image{
+            padding: 0 4px 4px 0;
+        }
+        .menu{
+            
+            background-color: whitesmoke;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.132);
+            width:80%;
+            margin: auto;
+            display: flex;
+            margin-top: 5%;
+            justify-content:center;
+            box-sizing: border-box;
+            align-items: center;
+            padding:3%;
+        }
+        .contact{
+            width: 80%;
+            padding:3%;
+            background-color: whitesmoke;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.166);
+            margin: auto;
+            box-sizing: border-box;
+            margin-top:5%;
+            margin-bottom:2%;
+            
+        }
+        .contact h1{
+            letter-spacing: 4px;
+            margin:4% 0 2% 2%;
+             
+        }
+        .contact p{
+            letter-spacing: 2px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 1.7rem;
+        }
+        .contact h4{
+            letter-spacing: 2px;
+            font-size: 17px;
+            line-height:2rem;
+            color: red;
+        }
+        form h1{
+            text-align: center;
+            color: red;
+            letter-spacing: 3px;
+            font-family: var(--nav-font);
+        }
+        form{
+            width: 80%;
+            margin: auto;
+            background-color:whitesmoke;
+            box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.142);
+            padding:1.5%;
+            display: block;
+            box-sizing: border-box;
+            margin-top: 2%;
+
+        }
+        form input{
+            padding:1%;
+            width: 70%;
+            box-sizing: border-box;
+            display: flex;
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.179);
+            border-radius:5px;
+            border: none;
+            margin: auto; 
+        }
+        .input-space{
+            margin-top: 2%;
+        }
+        form button{
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            padding: 1%;
+            border: none;
+            background-color: rgba(7, 70, 7, 0.792);
+            border-radius: 5px;
+        }
+        footer{width: 100%;
+             margin-top: 10px;
+             text-align: center;
+             background-color: rgba(0, 0, 0, 0.434);
+             padding: 10px;
+             color: white;
+             letter-spacing: 4px;
+             box-sizing: border-box;
+         }
+         footer p strong a{
+            color: red;
+            letter-spacing: 5px;
+            font-family: var(--nav-font);
+         }
+         a{
+            text-decoration: none;
+         }
+         footer p strong:hover{
+            font-size: 20px;
+            transition: all ease-in-out 0.5s;
+         }
+         input::placeholder{
+            letter-spacing: 3px;
+            font-size:16px;
+         }
+
+
+
+/*********************Media Query Section***********************************************/
+
+         @media(max-width:1250px){
+            .about,.menu{
+                flex-direction: column;
+                 
+            }
+            .about-content,.menu-content,.about-img,.menu-img {
+                width:100%;
+                margin: auto;  
+            }
+          
+        }
+        
+
+       
+    </style>
+</head>
+<body>
+<header>
+        <h1><span>C</span>hinni Catering</h1>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <p>Le Catering</p>
+        </section> 
+        <section class="about">
+            <div class="about-img">
+                <img src="about.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <h1>About Catering</h1>
+                <h5>Tradition since 1889</h5>
+                <p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+        <section class="menu">
+            <div class="menu-content">
+                <h1>Our Menu</h1>
+                <h4>Bread Basket</h4>
+                <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+                <h4>Honey Almond Granola with Fruits</h4>
+                <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                <h4>Belgian Waffle</h4>
+                <p>Vanilla flavored batter with malted flour 7.50</p>
+                <h4>Scrambled eggs</h4>
+                <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                <h4>Blueberry Pancakes</h4>
+                <p>With syrup, butter and lots of berries 8.50</p>
+            </div>
+            <div class="menu-image">
+                <img src="about.jpg" alt="">
+            </div>
+        </section>
+        <section class="contact">
+            <h1>Contact</h1>
+            <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+            <h4>Catering Service, 42nd Living St, 43043 New York, NY</h4>
+            <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:
+            </p>
+            <form action="">
+                <h1>Get in Touch</h1>
+                <input type="text" placeholder="Enter Your Name" name="" required autocomplete="on" class="input-space">
+                <input type="number" placeholder="How Many People" name="" required autocomplete="on" class="input-space" >
+                <input type="datetime-local" placeholder="Enter Booking Date" name="" required autocomplete="on" class="input-space">
+                <input type="text" placeholder="Share Your Experience" name="" required autocomplete="on" class="input-space">
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 BR Architecture. All rights reserved.</p>
+        <p>Contact Through &copy; <strong style="color:red;"><a href="https://www.linkedin.com/in/viswanadhapalli-vennela-45860b22a/">viswanadhapalli Vennela</a></strong></p>
+         
+      </footer>
+</body>
+</html>
